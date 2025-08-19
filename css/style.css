@@ -1,4 +1,18 @@
 .main-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f0f0f0;
+}
+.card-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+.main-navbar {
   width: 100%;
   background: transparent;
   padding: 0 24px;
@@ -20,20 +34,6 @@
   overflow: visible;
 }
 
-.timeline {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  z-index: 1;
-}
-
-.timeline {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .card h1, .card h4 {
   font-weight: 500;
   letter-spacing: -0.025em;
@@ -49,16 +49,27 @@
 .nav-btn {
   background: #95afec;
   color: #fff;
-  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 80px;
+  padding: 0 10px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s, color 0.2s;
 }
+.nav-btn svg {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
 
 .nav-btn:hover {
-  background: #95afec;
-  color: #ffd700;
+  background: #ec95a9;
+  color: #ffffff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -91,9 +102,7 @@ body {
   text-align: center;
 }
 
-.dark-mode nav {
-  background: #222;
-}
+
 
 .dark-mode .card {
   background: #222;
@@ -124,28 +133,28 @@ section {
 /* /////////Icon Styles///////// */
 /*Github Icon*/
 .icon-github svg path {
-  fill: #ffffff; /* GitHub dark gray for light mode */
+  fill: #ffffff;
   transition: fill 0.3s;
 }
 .dark-mode .icon-github svg path {
-  fill: #ffd700; /* Gold for dark mode */
+  fill: #ffffff;
 }
 
 /* Resume Icon */
 .icon-resume svg path {
-  fill: #ffffff; /* Light mode color */
+  fill: #ffffff;
   transition: fill 0.3s;
 }
 .dark-mode .icon-resume svg path {
-  fill: #ffd700; /* Dark mode color */
+  fill: #ffffff;
 }
 
 .icon-linkedin svg path {
-  fill: #ffffff; /* LinkedIn blue for light mode */
+  fill: #ffffff;
   transition: fill 0.3s;
 }
 .dark-mode .icon-linkedin svg path {
-  fill: #ffd700; /* Gold for dark mode */
+  fill: #ffffff;
 }
 
 * {
