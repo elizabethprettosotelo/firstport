@@ -8,9 +8,15 @@ body {
 
 body {
   font-family: 'Radio Canada Big', sans-serif;
-  font-weight: 400;
+  font-weight: 200;
+  letter-spacing: -0.05em;
 }
 
+h1 {
+    font-family: 'Radio Canada Big', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+}
 section {
   min-height: 100vh; 
   display: flex;
@@ -20,18 +26,22 @@ section {
 }
 
 .card {
-  /* Add shadows to create the "card" effect */
+  width: 300px;
+  height: 200px;
+  box-sizing: border-box; /* Includes padding/border in size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;  
   box-shadow: 0 4px 8px 0 rgb(170, 182, 207);
   transition: 0.3s;
   border-radius: 5px;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgb(159, 190, 236);
 }
 
-/* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
 }
