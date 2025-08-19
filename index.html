@@ -4,19 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elizabeth Pretto-Sotelo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="main-navbar">
+        <div class="nav-btn-row">
+            <a href="#home" class="nav-btn">Home</a>
+            <a href="#about" class="nav-btn">About</a>
+            <a href="#projects" class="nav-btn">Projects</a>
+            <a href="#experience" class="nav-btn">Experience</a>
+            <a href="resume.pdf" target="_blank" class="nav-btn">
+                <span class="icon-resume">
+                    <svg width="24" height="24" viewBox="0 0 43.916 43.916" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M34.395,0H9.522c-2.762,0-5,2.239-5,5v33.916c0,2.761,2.238,5,5,5h24.871c2.762,0,5-2.239,5-5V5C39.395,2.239,37.154,0,34.395,0z M9.208,16.855c0-1.172,0.951-2.121,2.121-2.121h0.742c-0.791-0.874-1.277-2.03-1.277-3.304c0-2.723,2.209-4.931,4.932-4.931c2.725,0,4.932,2.207,4.932,4.932c0,1.272-0.486,2.429-1.279,3.303h0.709c1.172,0,2.121,0.949,2.121,2.121v3.578c0,1.122-0.875,2.03-1.975,2.106h-9.051c-1.1-0.076-1.975-0.984-1.975-2.106V16.855L9.208,16.855z M32.708,37.416h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,37.416,32.708,37.416zM32.708,29.916h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,29.916,32.708,29.916z M32.708,22.416h-6.5c-1.104,0-2-0.896-2-2c0-1.104,0.896-2,2-2h6.5c1.104,0,2,0.896,2,2C34.708,21.52,33.812,22.416,32.708,22.416z" />
+                    </svg>
+                </span>
+            </a>
+            <a href="https://github.com/elizabethprettosotelo" target="_blank" class="nav-btn">
+                <span class="icon-github">
+                    <svg width="24" height="24" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                            fill="#24292f" />
+                    </svg>
+                </span>
+            </a>
+            <a href="https://linkedin.com/in/elizabethprettosotelo" target="_blank" class="nav-btn">
+                <span class="icon-linkedin">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    </svg>
+                </span>
+            </a>
+            <button id="theme-toggle">Toggle Dark Mode</button>
+        </div>
+    </nav>
     </nav>
 
     <!-- Sections -->
@@ -34,69 +61,38 @@
     <section id="projects">
         <h1>Projects</h1>
         <p>Check out what I've been up to!</p>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Tariffix</b></h4>
-                <p>A vite-powered tariff tracking Chrome extension.</p>
+        <div class="card-row">
+            <div class="card">
+                <div class="container">
+                    <h4><b>Tariffix</b></h4>
+                    <p>A vite-powered tariff tracking Chrome extension.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4><b>Pallit</b></h4>
+                    <p>A color palette picking and font pairing tool in one.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4><b>Kmodo</b></h4>
+                    <p>An all inclusive hackathon organizing tool.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4><b>Portfolio V1</b></h4>
+                    <p>My first portfolio!</p>
+                </div>
             </div>
         </div>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Pallit</b></h4>
-                <p>A color palette picking and font pairing tool in one.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Kmodo</b></h4>
-                <p>An all inclusive hackathon organizing tool.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Portfolio V1</b></h4>
-                <p>My first portfolio!</p>
-            </div>
-        </div>
-
     </section>
 
     <section id="experience">
         <h1>Experience</h1>
-        <p>Experiences are what shape us into who we are.</p>
-<div class="card">
-            <div class="container">
-                <h4><b>Tariffix</b></h4>
-                <p>A vite-powered tariff tracking Chrome extension.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Pallit</b></h4>
-                <p>A color palette picking and font pairing tool in one.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Kmodo</b></h4>
-                <p>An all inclusive hackathon organizing tool.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="container">
-                <h4><b>Portfolio V1</b></h4>
-                <p>My first portfolio!</p>
-            </div>
-        </div>
-    
     </section>
 </body>
+<script src="js/script.js"></script>
 
 </html>
