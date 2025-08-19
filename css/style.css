@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400&display=swap');
+
+
+body {
+  background-color: #f0f0f0; /* You can use any color you like */
+}
+
+body {
+  font-family: 'Radio Canada Big', sans-serif;
+  font-weight: 400;
+}
+
+section {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgb(170, 182, 207);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgb(159, 190, 236);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
