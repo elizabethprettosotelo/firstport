@@ -76,7 +76,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400&display=swap');
 
 body {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   font-family: 'Radio Canada Big', sans-serif;
   font-weight: 200;
   letter-spacing: -0.05em;
@@ -85,7 +85,7 @@ body {
 
 .dark-mode {
   background-color: #0f182d !important;
-  color: #f5f5f5 !important;
+  color: #ffffff !important;
 }
 
 .card {
@@ -174,4 +174,81 @@ button {
 
 button:hover {
   background-color: #86aede;
+}
+
+/* Add this to your css/style.css */
+// Horizontal experience cards
+.experience-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.experience-card {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  min-height: 140px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.experience-card .container { //IMPORTANT AS HELL
+  padding: 24px;
+  width: 100%;
+  text-align: right;
+}
+
+.experience-card-left {
+  flex-direction: row;
+  flex-direction: row-reverse;
+  align-items: left;
+}
+
+.experience-card-right {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: right;
+}
+
+.experience-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  margin: 0 24px;
+}
+
+.experience-card-right .container {
+  text-align: left;
+  padding: 24px;
+  width: 100%;
+}
+
+.experience-card-right .experience-img {
+  margin: 0 0 0 24px; /* Only left margin for spacing from content */
+  border-radius: 0 12px 12px 0; /* Rounded corners on the right */
+  align-self: stretch; /* Makes image flush with the card's right edge */
+  object-fit: cover;
+}
+
+.experience-card-left .experience-img {
+  margin: 0 24px 0 0; /* right margin only */
+  border-radius: 12px 0 0 12px; /* rounded corners on the left */
+}
+
+.experience-card-left .container {
+  text-align: right;
+  padding: 24px;
+  width: 100%;
+}
+
+
+.dark-mode .experience-card {
+  background: #222;
+  color: #f5f5f5;
 }
