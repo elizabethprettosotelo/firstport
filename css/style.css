@@ -177,7 +177,7 @@ button:hover {
 }
 
 /* Add this to your css/style.css */
-// Horizontal experience cards
+/*Horizontal experience cards*/
 .experience-row {
   display: flex;
   flex-direction: column;
@@ -197,22 +197,17 @@ button:hover {
   transition: background 0.3s, color 0.3s;
 }
 
-.experience-card .container { //IMPORTANT AS HELL
+.experience-card .container {
   padding: 24px;
   width: 100%;
-  text-align: right;
 }
 
 .experience-card-left {
   flex-direction: row;
-  flex-direction: row-reverse;
-  align-items: left;
 }
 
 .experience-card-right {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: right;
+  flex-direction: row;
 }
 
 .experience-img {
@@ -224,7 +219,7 @@ button:hover {
 }
 
 .experience-card-right .container {
-  text-align: left;
+  text-align: right;
   padding: 24px;
   width: 100%;
 }
@@ -242,7 +237,7 @@ button:hover {
 }
 
 .experience-card-left .container {
-  text-align: right;
+  text-align: left;
   padding: 24px;
   width: 100%;
 }
@@ -251,4 +246,110 @@ button:hover {
 .dark-mode .experience-card {
   background: #222;
   color: #f5f5f5;
+}
+
+/* Timeline scoped to Experience section */
+#experience {
+  justify-content: flex-start;
+  padding: 64px 0;
+}
+
+#experience h1 { /*this creates space between the header and the timeline*/
+  margin-bottom: 100px;
+}
+#experience .experience-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  column-gap: 24px;
+  --timeline-gap: 96px;
+  grid-auto-rows: var(--timeline-gap);
+}
+
+#experience .experience-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #dfe6f7;
+  transform: translateX(-1px);
+  z-index: 1;
+}
+
+.dark-mode #experience .experience-row::before {
+  background: #3a476a;
+}
+
+#experience .experience-card {
+  position: relative;
+}
+
+#experience .experience-card-left {
+  grid-column: 1;
+  justify-self: end;
+}
+
+#experience .experience-card-left:nth-child(1) { grid-row: 1; }
+#experience .experience-card-left:nth-child(3) { grid-row: 3; }
+#experience .experience-card-left:nth-child(5) { grid-row: 5; }
+#experience .experience-card-left:nth-child(7) { grid-row: 7; }
+#experience .experience-card-left:nth-child(9) { grid-row: 9; }
+
+#experience .experience-card-right {
+  grid-column: 3;
+  justify-self: start;
+}
+
+#experience .experience-card-right:nth-child(2) { grid-row: 2; }
+#experience .experience-card-right:nth-child(4) { grid-row: 4; }
+#experience .experience-card-right:nth-child(6) { grid-row: 6; }
+#experience .experience-card-right:nth-child(8) { grid-row: 8; }
+#experience .experience-card-right:nth-child(10) { grid-row: 10; }
+
+#experience .experience-card-left::after,
+#experience .experience-card-right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #95afec;
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+.dark-mode #experience .experience-card-left::after,
+.dark-mode #experience .experience-card-right::after {
+  box-shadow: 0 0 0 3px #222;
+}
+
+#experience .experience-card-left::after { right: -18px; }
+#experience .experience-card-right::after { left: -18px; }
+
+/* Optional: responsive tweak for narrow screens */
+@media (max-width: 900px) {
+  #experience .experience-row {
+    grid-template-columns: 1fr;
+  }
+  #experience .experience-row::before {
+    left: 24px;
+    transform: none;
+  }
+  #experience .experience-card {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+  #experience .experience-card-left,
+  #experience .experience-card-right {
+    grid-column: 1;
+    justify-self: stretch;
+    transform: none;
+  }
+  #experience .experience-card::after {
+    display: none;
+  }
 }
