@@ -408,7 +408,7 @@ button:hover {
 }
 
 .experience-card .container p {
-  margin-top: 2px;   /* small gap above */
+  margin-top: 10px;   /* small gap above */
   margin-bottom: 2px; /* keeps text blocks close together */
   line-height: 1.4;  /* improves readability */
 }
