@@ -2,13 +2,35 @@
 
 body {
   background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),  
+    url('../../images/litemodebg.svg');
+  background-size: cover;        
+  background-repeat: no-repeat;  
+  background-position: center;   
   font-family: 'Inter', sans-serif;
   font-weight: 200;
   letter-spacing: -0.05em;
   transition: background 0.3s, color 0.3s;
+  position: relative;
+  overflow-x: hidden;
+  color: #0A0116;   /* 🔹 Light mode text color */
 }
 
-h1 { //this is for section headers. general h1
+/* Dark mode */
+body.dark-mode {
+  background-color: #0A0116;
+  background-image: 
+    linear-gradient(rgba(10,1,22,0.9), rgba(10,1,22,0.9)),  
+    url('../../images/darkmodebg.svg');
+  background-size: cover;        
+  background-repeat: no-repeat;  
+  background-position: center;   
+  color: #ffffff;  /* 🔹 Dark mode text color */
+}
+
+
+h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     letter-spacing: -0.035em;
@@ -24,7 +46,6 @@ section {
 }
 
 
-///////////NAVBAR///////////
 .main-navbar {
   position: sticky;
   top: 0;
@@ -80,7 +101,7 @@ section {
 }
 
 .nav-btn {
-  background: #95afec;
+  background: #BEE5FF;
   color: #fff;
   display: flex;
   align-items: center;
@@ -101,12 +122,12 @@ section {
 }
 
 .nav-btn:hover {
-  background: #ec95a9;
+  background: #FFC7BF;
   color: #ffffff;
 }
 
 .dark-mode {
-  background-color: #0f182d !important;
+  background-color: #0A0116 !important;
   color: #ffffff !important;
 }
 
@@ -117,6 +138,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
   margin: 0;
   box-shadow: 0 4px 8px 0 rgb(198, 208, 227);
   transition: 0.3s;
@@ -126,7 +148,7 @@ section {
 
 
 .dark-mode .card {
-  background: #222;
+  background: #0A0116;
   color: #f5f5f5;
 }
 
@@ -276,7 +298,7 @@ button:hover {
 
 
 .dark-mode .experience-card {
-  background: #222;
+  background: #0A0116;
   color: #f5f5f5;
 }
 
@@ -292,7 +314,7 @@ button:hover {
 
 #experience h4 { /*this creates space between the header and the timeline*/
   font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 #experience h5 { /*this creates space between the header and the timeline*/
@@ -323,7 +345,7 @@ button:hover {
 }
 
 .dark-mode #experience .experience-row::before {
-  background: #3a476a;
+  background: #0A0116;
 }
 
 #experience .experience-card {
