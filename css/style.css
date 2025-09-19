@@ -1,5 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+/* Home section layout */
+#home {
+  padding: 60px 40px;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centers text vertically relative to carousel */
+  gap: 40px;
+}
+
+.text-section {
+  max-width: 500px;  /* controls how far text stretches */
+  text-align: left;
+}
+
+.text-section h1 {
+  margin-bottom: 0px; /* spacing between h1 and p */
+}
+
+.text-section p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* vertically center text with carousel */
+  gap: 40px;
+}
+
+.carousel {
+  width: 550px;       /* fixed width */
+  height: 550px;      /* fixed height */
+  flex-shrink: 0;     /* prevents it from shrinking in flex */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel img {
+  width: 550px;       /* match carousel width */
+  height: 550px;      /* match carousel height */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#carousel-caption {
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #3F71A8;
+    transition: opacity 0.5s ease; /* for fade in/out */
+}
+
 body {
   background-color: #ffffff;
   background-image: 
@@ -21,7 +82,7 @@ body {
 body.dark-mode {
   background-color: #0A0116;
   background-image: 
-    linear-gradient(rgba(10,1,22,0.9), rgba(10,1,22,0.9)),  
+    linear-gradient(rgba(10,1,22,0.8), rgba(10,1,22,0.8)),  
     url('../../images/darkmodebg.svg');
   background-size: cover;        
   background-repeat: no-repeat;  
@@ -36,6 +97,13 @@ h1 {
     letter-spacing: -0.035em;
 }
 
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    color: #3F71A8;
+}
+
 
 section {
   min-height: 100vh; 
@@ -43,6 +111,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#about {
+  padding: 20px 40px;      /* less top/bottom space */
+  margin: 40px auto;       /* optional vertical spacing */
+  text-align: left;
+  min-height: auto;
 }
 
 
@@ -433,4 +508,52 @@ button:hover {
   margin-top: 10px;   /* small gap above */
   margin-bottom: 2px; /* keeps text blocks close together */
   line-height: 1.4;  /* improves readability */
+}
+
+
+.carousel {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 40px auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel img {
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Dot container */
+.carousel-btn-container {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Dot buttons */
+.carousel-btn {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #BEE5FF;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s;
+}
+
+.carousel-btn.active {
+  background: #FFC7BF;
 }
