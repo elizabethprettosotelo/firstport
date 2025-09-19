@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Only add dark mode toggle if button exists
   const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-  });
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  }
 
   // Setup GIF hover effects for experience cards
   const experienceImages = document.querySelectorAll('.experience-img[data-gif]');
@@ -18,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const caption = document.getElementById('carousel-caption');
 
   const captions = [
-    "I'm a designer!",  // for graphicing.png
-    "I'm a programmer!", // for coding.png
-    "And a creative through and through!" // for arting.png
+    "I'm a UI/UX Designer!",  
+    "I'm a Software Developer!", 
+    "I'm a creative! :D" 
   ];
 
   let currentIndex = 0;
@@ -46,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       caption.textContent = captions[index];
       caption.classList.add('show');
-    }, 200); // smooth fade timing
+    }, 200);
   }
 
   function goToSlide(index) {
@@ -68,9 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Auto-scroll every 3 seconds
+  // Auto-scroll every 4 seconds
   setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
     goToSlide(currentIndex);
-  }, 3000);
+  }, 4000);
+
 });

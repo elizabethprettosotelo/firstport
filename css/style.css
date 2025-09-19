@@ -2,7 +2,7 @@
 
 /* Home section layout */
 #home {
-  padding: 60px 40px;
+  padding: 0px 40px;
 }
 
 .home-content {
@@ -19,6 +19,10 @@
 
 .text-section h1 {
   margin-bottom: 0px; /* spacing between h1 and p */
+}
+
+.text-section h2 {
+  margin-bottom: 0; /* adds space before the h1 */
 }
 
 .text-section p {
@@ -55,9 +59,11 @@
 }
 
 #carousel-caption {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
     color: #3F71A8;
+    line-height: 1.2; /* optional, for spacing */
     transition: opacity 0.5s ease; /* for fade in/out */
 }
 
@@ -70,7 +76,7 @@ body {
   background-repeat: no-repeat;  
   background-position: center;   
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: -0.05em;
   transition: background 0.3s, color 0.3s;
   position: relative;
@@ -120,34 +126,153 @@ section {
   min-height: auto;
 }
 
-
-.main-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #f0f0f0;
-}
-.card-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 32px;
-}
-.main-navbar {
-  width: 100%;
-  background: transparent;
-  padding: 0 24px;
+#tech-stack {
+  padding: 60px 40px;
+  text-align: center;
 }
 
-.nav-btn-row {
+#tech-stack h1 {
+  margin-bottom: 40px;
+  color: #3F71A8;
+}
+
+.tech-grid {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;              /* wrap to next line if needed */
+  justify-content: center;      /* center all logos horizontally */
+  gap: 20px;                    /* spacing between logos */
+  padding: 20px 0;
+}
+
+.tech-item img {
+  width: 60px;                  /* small, uniform size */
+  height: 60px;
+  object-fit: contain;           /* maintain logo proportions */
+  transition: transform 0.3s;
+}
+
+.tech-item img:hover {
+  transform: scale(1.2);         /* subtle hover effect */
+}
+
+/* Dark mode */
+.dark-mode .tech-item p {
+  color: #f5f5f5;
+}
+
+
+.main-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #BEE5FF;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    justify-content: space-between; /* logo left, external links right */
+}
+
+/* Logo stays left */
+.logo {
+  display: flex;
   align-items: center;
-  gap: 12px;
+}
+
+/* Center the main nav links */
+.navbar-links.main-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex: 1; /* fills remaining space between logo and external links */
+}
+
+/* External links stay on the right */
+.navbar-links.external-links {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.nav-btn {
+  background: #BEE5FF;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-flex;       /* fixes flex shrinking issue */
+  align-items: center;
   justify-content: center;
+  white-space: nowrap;        /* prevents text wrapping */
+}
+
+.nav-btn:hover {
+  background: #FF9A85;
+}
+
+/* Projects Cards Row */
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 24px;                              /* spacing between cards */
+  justify-items: center;                  /* centers cards horizontally in their column */
+}
+
+/* Individual Cards */
+.card-row .card {
   width: 100%;
+  max-width: 300px; /* controls card width */
+  box-sizing: border-box;
+}
+
+.project-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+/* wrapper anchor gets fixed square size so different image types are normalized */
+.project-icons a {
+  display: inline-flex;
+  width: 32px;     /* tweak this to taste (32px is a nice default) */
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* remove possible underline */
+}
+
+/* make the image fill the wrapper while preserving aspect ratio */
+.project-icons img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain; /* preserve proportions without stretching */
+}
+
+/* optional hover effect */
+.project-icons a:hover img {
+  transform: scale(1.12);
+  transition: transform 150ms ease;
+}
+
+/* Optional: smaller screens */
+@media (max-width: 960px) {
+  .card-row {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-row {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
 }
 
 .experience-wrapper {
@@ -167,39 +292,7 @@ section {
   font-weight: 400;
   letter-spacing: -0.025em;
 }
-/* Navbar external link buttons */
-.navbar-links {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-left: 24px;
-}
 
-.nav-btn {
-  background: #BEE5FF;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  min-width: 80px;
-  padding: 0 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s, color 0.2s;
-}
-.nav-btn svg {
-  height: 24px;
-  width: 24px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.nav-btn:hover {
-  background: #FFC7BF;
-  color: #ffffff;
-}
 
 .dark-mode {
   background-color: #0A0116 !important;
@@ -518,6 +611,7 @@ button:hover {
   overflow: hidden;
   border-radius: 12px;
   margin: 40px auto;
+  margin-left: 200px;
 }
 
 .carousel-track {
