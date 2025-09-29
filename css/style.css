@@ -71,7 +71,7 @@ body {
   background-color: #ffffff;
   background-image: 
     linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),  
-    url('../../images/litemodebg.svg');
+  url('../images/litemodebg.svg');
   background-size: cover;        
   background-repeat: no-repeat;  
   background-position: center;   
