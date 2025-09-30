@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 /* Home section layout */
 #home {
   padding: 0px 40px;
+/* Logo stays left */
 }
 
 .home-content {
@@ -162,18 +162,38 @@ section {
 
 
 .main-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #BEE5FF;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    justify-content: space-between; /* logo left, external links right */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #BEE5FF;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  justify-content: center;
+  gap: 0;
+}
+
+.main-navbar > .logo {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.main-navbar > .navbar-links.external-links {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
 }
 
 /* Logo stays left */
@@ -187,7 +207,10 @@ section {
     display: flex;
     gap: 24px;
     justify-content: center;
-    flex: 1; /* fills remaining space between logo and external links */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
 }
 
 /* External links stay on the right */
